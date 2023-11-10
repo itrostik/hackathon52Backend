@@ -5,9 +5,7 @@
     "moduleResolution": "node",
     "rootDir": "src",
     "outDir": "dist",
-    "lib": [
-      "ES2022"
-    ],
+    "lib": ["ES2022"],
     "strict": true,
     "esModuleInterop": true,
     "allowJs": true,
@@ -16,11 +14,6 @@
     "skipLibCheck": true,
     "forceConsistentCasingInFileNames": true
   },
-  "include": [
-    "src/**/*"
-  ],
-  "exclude": [
-    "node_modules",
-    "src/dev"
-  ]
+  "include": ["src/**/*"],
+  "exclude": ["node_modules"]
 }
