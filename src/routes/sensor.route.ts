@@ -1,41 +1,47 @@
-import Router from 'express'
-import sensorController from '../controller/sensor.controller'
+import Router from "express";
+import sensorController from "../controller/sensor.controller";
 
 // @ts-ignore
-const sensorRoute = new Router()
+const sensorRoute = new Router();
 
-sensorRoute.get(
-  '/sensor.getUserColorSensor',
-  sensorController.getUserColorSensor
-)
-sensorRoute.get(
-  '/users.getRoomColorSensor',
-  sensorController.getRoomColorSensor
-)
+sensorRoute.post(
+  "/sensor.getUserColorSensor",
+  sensorController.getUserColorSensor,
+);
+sensorRoute.post(
+  "/sensor.getRoomColorSensor",
+  sensorController.getRoomColorSensor,
+);
 
-sensorRoute.get(
-  '/users.getUserStateSensor',
-  sensorController.getUserStateSensor
-)
-sensorRoute.get(
-  '/users.getRoomStateSensor',
-  sensorController.getRoomStateSensor
-)
-sensorRoute.get(
-  '/users.getUserBinarySensor',
-  sensorController.getUserBinarySensor
-)
-sensorRoute.get(
-  '/users.getRoomBinarySensor',
-  sensorController.getRoomBinarySensor
-)
-sensorRoute.put('/users.updateColorSensor', sensorController.updateColorSensor)
-
-sensorRoute.put('/users.updateStateSensor', sensorController.updateStateSensor)
+sensorRoute.post(
+  "/sensor.getUserStateSensor",
+  sensorController.getUserStateSensor,
+);
+sensorRoute.post(
+  "/sensor.getRoomStateSensor",
+  sensorController.getRoomStateSensor,
+);
+sensorRoute.post(
+  "/sensor.getUserBinarySensor",
+  sensorController.getUserBinarySensor,
+);
+sensorRoute.post(
+  "/sensor.getRoomBinarySensor",
+  sensorController.getRoomBinarySensor,
+);
+sensorRoute.put(
+  "/sensor.updateColorSensor",
+  sensorController.updateColorSensor,
+);
 
 sensorRoute.put(
-  '/users.updateBinarySensor',
-  sensorController.updateBinarySensor
-)
+  "/sensor.updateStateSensor",
+  sensorController.updateStateSensor,
+);
 
-export default sensorRoute
+sensorRoute.put(
+  "/sensor.updateBinarySensor",
+  sensorController.updateBinarySensor,
+);
+
+export default sensorRoute;
